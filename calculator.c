@@ -53,7 +53,7 @@ do{
             scanf("%d %d", &a, &b);
             if(b != 0)
             {
-                div = (float)a / b;   // FIXED division
+                div = (float)a / b;  
                 printf("Result = %.2f\n", div);
             }
             else
