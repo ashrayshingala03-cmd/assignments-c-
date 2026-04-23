@@ -5,7 +5,7 @@ struct EMPLOYEE {
     char name[50];
     char designation[50];
     char gender;
-    char doj[15]; // Date of Joining
+    char doj[15]; 
     float salary;
 };
 
@@ -54,7 +54,7 @@ int main() {
         printf("Name: ");
         scanf("%s", emp[i].name);
         printf("Designation (e.g., Asst Manager): ");
-        scanf(" %[^\n]", emp[i].designation); // Reads string with spaces
+        scanf(" %[^\n]", emp[i].designation); 
         printf("Gender (M/F): ");
         scanf(" %c", &emp[i].gender);
         printf("Date of Joining (DD/MM/YYYY): ");
