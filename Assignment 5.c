@@ -9,7 +9,7 @@ void checkMagicSquare();
 int main() {
     int choice;
 
-    // Main Menu Loop
+    
     while (1) {
         printf("\n--- Matrix Operations Menu ---\n");
         printf("1. Addition of two matrices\n");
@@ -30,7 +30,6 @@ int main() {
     return 0;
 }
 
-// 1. Matrix Addition
 void matrixAddition() {
     int r, c;
     printf("Enter rows and columns: ");
@@ -47,7 +46,6 @@ void matrixAddition() {
         for (int j = 0; j < c; j++) scanf("%d", &b[i][j]);
     }
 
-    // Logic: sum[i][j] = a[i][j] + b[i][j]
     for (int i = 0; i < r; i++) {
         for (int j = 0; j < c; j++) {
             sum[i][j] = a[i][j] + b[i][j];
@@ -56,8 +54,6 @@ void matrixAddition() {
         printf("\n");
     }
 }
-
-// 2. Saddle Point
 void findSaddlepoint() {
     int n, i, j, flag = 0;
     printf("Enter order of square matrix (n): ");
@@ -72,8 +68,6 @@ void findSaddlepoint() {
     for (i = 0; i < n; i++) {
         int min_row = mat[i][0];
         int col_ind = 0;
-
-        // Find min in current row
         for (j = 1; j < n; j++) {
             if (mat[i][j] < min_row) {
                 min_row = mat[i][j];
@@ -81,7 +75,6 @@ void findSaddlepoint() {
             }
         }
 
-        // Check if min is max in column
         int k;
         for (k = 0; k < n; k++) {
             if (min_row < mat[k][col_ind]) break;
@@ -95,7 +88,6 @@ void findSaddlepoint() {
     if (flag == 0) printf("No Saddle point\n");
 }
 
-// 3. Inverse of 2x2 Matrix
 void findInverse() {
     float a[2][2], det;
     printf("Enter 2x2 Matrix elements:\n");
@@ -112,7 +104,6 @@ void findInverse() {
     }
 }
 
-// 4. Check Magic Square
 void checkMagicSquare() {
     int n, i, j;
     printf("Enter order n: ");
